@@ -1,15 +1,17 @@
 package com.liutao.controller;
 
+import com.liutao.entity.User;
 import com.wordnik.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.stereotype.Controller;
+import com.liutao.utils.RedisClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -27,8 +29,7 @@ public class UserController {
     private Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
-    private RedisTemplate<String, Object> redisTemplate;
-
+    private RedisClient redisClient;
     /**
      * 缓存测试
      *
@@ -39,12 +40,26 @@ public class UserController {
     @GetMapping("/redisTest")
     public String redisTest() {
         try {
-            redisTemplate.opsForValue().set("test-key", "redis测试内容", 5, TimeUnit.SECONDS);// 缓存有效期5秒
-            logger.info("从Redis中读取数据：" + redisTemplate.opsForValue().get("test-key").toString());
+            redisClient.putObject("test-key", "redis测试内容", 5);// 缓存有效期5秒
+            logger.info("从Redis中读取数据：" + redisClient.getObject("test-key").toString());
             TimeUnit.SECONDS.sleep(3);
-            logger.info("等待3秒后从Redis中读取数据：" + redisTemplate.opsForValue().get("test-key").toString());
+            logger.info("等待3秒后从Redis中读取数据：" + redisClient.getObject("test-key").toString());
             TimeUnit.SECONDS.sleep(3);
-            logger.info("等待5秒后尝试读取过期的数据：" + redisTemplate.opsForValue().get("test-key"));
+            logger.info("等待5秒后尝试读取过期的数据：" + redisClient.getObject("test-key"));
+
+            redisClient.putObject("user",new User("张三","zs123"),10);
+            logger.info("从Redis中读取数据User：" + redisClient.getObject("user"));
+
+            List<String> list = new ArrayList<>();
+            list.add("张飞");
+            list.add("刘备");
+            list.add("关于");
+            redisClient.putObject("list",list,5);
+            TimeUnit.SECONDS.sleep(3);
+            logger.info("从Redis中读取数据User：" + redisClient.getObject("list"));
+            TimeUnit.SECONDS.sleep(3);
+            logger.info("从Redis中读取数据list：" + redisClient.getObject("list"));
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

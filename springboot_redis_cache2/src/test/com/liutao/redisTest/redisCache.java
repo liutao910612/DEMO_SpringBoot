@@ -1,7 +1,6 @@
 package com.liutao.redisTest;
 
 import com.liutao.application.Application;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
