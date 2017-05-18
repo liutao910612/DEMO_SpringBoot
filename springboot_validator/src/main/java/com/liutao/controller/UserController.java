@@ -6,6 +6,7 @@ import com.wordnik.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -25,10 +26,11 @@ import java.util.List;
  * @see
  * @since
  */
-@Validated
+
 @Controller
 @Api(value = "test")
 @RequestMapping("/liutao/v1")
+@Validated
 public class UserController {
 
     private Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -46,7 +48,8 @@ public class UserController {
 
 
     @GetMapping("/user")
-    public @ResponseBody String check(@Min(value = 10,message = "名字长度必须大于10") @RequestParam int age) {
+    @ResponseStatus(HttpStatus.OK)
+    public @ResponseBody String check(@RequestParam @Min(value = 10,message = "名字长度必须大于10") int age) {
         return "ok";
     }
 
