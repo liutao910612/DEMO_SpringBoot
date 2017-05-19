@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import javax.validation.ValidationException;
 
 /**
- * 〈一句话功能简述〉
- * 〈功能详细描述〉
+ * 参数验证配置类
  *
  * @author LIUTAO
  * @version 2017/5/18
@@ -31,8 +30,6 @@ public class GlobalExceptionHandler {
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public String handle(ValidationException exception) {
-        System.out.println(exception.getLocalizedMessage());
-        System.out.println("bad request, " + exception.getMessage());
-        return "bad request, " + exception.getMessage();
+        return "传入参数不符合要求";
     }
 }
