@@ -1,14 +1,14 @@
 package com.liutao.controller;
 
+import com.liutao.commonUtility.CommonUtility;
 import com.liutao.model.User;
-import com.liutao.utilitys.ValidateUtility;
+import com.liutao.validatorUtility.ValidateUtility;
 import com.wordnik.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
@@ -31,6 +31,6 @@ public class UserController {
     public
     @ResponseBody
     String postUser(@Valid @RequestBody User user, BindingResult result, HttpServletResponse response) {
-        return ValidateUtility.judgeValidate(result,response);
+        return ValidateUtility.judgeValidate(result,response).getMessage();
     }
 }

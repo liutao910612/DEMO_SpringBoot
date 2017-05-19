@@ -1,7 +1,7 @@
 package com.liutao.controller;
 
 import com.liutao.model.Company;
-import com.liutao.utilitys.ValidateUtility;
+import com.liutao.validatorUtility.ValidateUtility;
 import com.wordnik.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +30,6 @@ public class CompanyController {
 
     @PostMapping(value = "/company")
     public String postCompany(@Valid @RequestBody Company company, BindingResult result,HttpServletResponse response){
-        return ValidateUtility.judgeValidate(result,response);
+        return ValidateUtility.judgeValidate(result,response).getMessage();
     }
 }

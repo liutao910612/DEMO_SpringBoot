@@ -23,6 +23,13 @@
         <version.jackson>2.4.4</version.jackson>
         <java.version>1.8</java.version>
     </properties>
+    <repositories>
+        <repository>
+            <id>lt-maven-repo</id>
+            <name>lt-maven-repo</name>
+            <url>https://raw.githubusercontent.com/liutao910612/maven-repository/master/repository</url>
+        </repository>
+    </repositories>
     <dependencies>
 
         <dependency>
@@ -112,6 +119,12 @@
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>1.1.0.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.liutao.utility</groupId>
+            <artifactId>utility</artifactId>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
 

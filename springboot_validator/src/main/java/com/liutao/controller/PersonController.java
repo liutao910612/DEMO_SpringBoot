@@ -1,9 +1,9 @@
 package com.liutao.controller;
 
 import com.liutao.model.Person;
-import com.liutao.utilitys.ValidateUtility;
 import com.liutao.validateInterface.PersonAddView;
 import com.liutao.validateInterface.PersonUpdateView;
+import com.liutao.validatorUtility.ValidateUtility;
 import com.wordnik.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,7 +38,7 @@ public class PersonController {
     public String addPerson(@RequestBody @Validated({PersonAddView.class, Default.class}) Person person, BindingResult result,HttpServletResponse response) {
         logger.debug("enter post person");
         logger.debug("the information of person :"+ person);
-        return ValidateUtility.judgeValidate(result,response);
+        return ValidateUtility.judgeValidate(result,response).getMessage();
     }
 
     /**
@@ -50,6 +50,6 @@ public class PersonController {
     public String modifyPerson(@RequestBody @Validated(value = {PersonUpdateView.class}) Person person, BindingResult result,HttpServletResponse response) {
         logger.debug("enter put person");
         logger.debug("the information of person :"+ person);
-        return ValidateUtility.judgeValidate(result,response);
+        return ValidateUtility.judgeValidate(result,response).getMessage();
     }
 }

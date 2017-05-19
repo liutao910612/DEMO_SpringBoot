@@ -43,13 +43,7 @@
     <logger name="springfox.documentation" level="WARN"/>
     <logger name="org.mybatis" level="WARN"/>
     <logger name="com.mchange" level="WARN"/>
-    <logger name="com.hongtu" level="DEBUG"/>
-    <logger name="com.hongtu.supplychain.finance.mapper">
-        <!--<appender-ref ref="SQL"/>-->
-    </logger>
-    <logger name="com.hongtu.supplychain.finance.dao">
-        <!--<appender-ref ref="SQL"/>-->
-    </logger>
+    <logger name="com.liutao" level="DEBUG"/>
     <root level="DEBUG">
         <appender-ref ref="STDOUT" />
         <!--<appender-ref ref="FILE" />-->
