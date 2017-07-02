@@ -1,0 +1,36 @@
+/*蓝色按钮,绝对定位*/
+.blueButton {
+    position: absolute;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.blueButton:hover {
+    text-decoration: none;
+}
+
+/*自定义上传,位置大小都和a完全一样,而且完全透明*/
+.fileUpload {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 40px;
+    opacity: 0;
+}
+
+#sourcefile ,#sourcefileOfSign{
+    float: left;
+}
+
+#txtFileUpload,#txtFileUploadOfSign {
+    float: left;
+}
+
+.alert-warning, .alert-debug {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liutao.mapper.UserMapper">
+
+    <select id="getUserList" resultType="com.liutao.entity.User" parameterType="com.liutao.tag.model.RequestModel">
+        select * from user
+        <if test="sort!=null">
+            ORDER BY
+            ${sort} ${order}
+        </if>
+        limit #{startRow},#{rows}
+    </select>
+
+    <select id="countUsers" resultType="int">
+    select COUNT(*) from user
+  </select>
+</mapper>
