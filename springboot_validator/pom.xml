@@ -3,19 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
-
-    <name>demo</name>
-    <description>Demo project for Spring Boot</description>
-
+    <groupId>com.liutao.demo.springboot</groupId>
+    <artifactId>springboot_validator</artifactId>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>SpringBoot_Demo</groupId>
+        <artifactId>SpringBoot_demo</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,13 +16,6 @@
         <version.jackson>2.4.4</version.jackson>
         <java.version>1.8</java.version>
     </properties>
-    <repositories>
-        <repository>
-            <id>lt-maven-repo</id>
-            <name>lt-maven-repo</name>
-            <url>https://raw.githubusercontent.com/liutao910612/maven-repository/master/repository</url>
-        </repository>
-    </repositories>
     <dependencies>
 
         <dependency>
@@ -119,12 +105,6 @@
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>1.1.0.Final</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.liutao.utility</groupId>
-            <artifactId>utility</artifactId>
-            <version>1.0.1</version>
         </dependency>
     </dependencies>
 

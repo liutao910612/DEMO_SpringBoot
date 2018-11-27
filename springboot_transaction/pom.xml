@@ -3,26 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
-
-    <name>demo</name>
-    <description>Demo project for Spring Boot</description>
+    <groupId>com.liutao.demo.springboot</groupId>
+    <artifactId>springboot_transaction</artifactId>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>SpringBoot_Demo</groupId>
+        <artifactId>SpringBoot_demo</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <version.spring>3.2.9.RELEASE</version.spring>
-        <version.jackson>2.4.4</version.jackson>
-        <java.version>1.7</java.version>
-    </properties>
+
     <dependencies>
 
         <dependency>
