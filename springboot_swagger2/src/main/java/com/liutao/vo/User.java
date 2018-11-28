@@ -10,9 +10,9 @@ import com.wordnik.swagger.annotations.ApiModelProperty;
 @ApiModel(value="user对象",description="用户对象user")
 public class User {
     private String id;
-    @ApiModelProperty(value="用户名",name="name",example="xingguo")
+    @ApiModelProperty(value="用户名")
     private String name;
-    @ApiModelProperty(value="密码",name="password",required=true)
+    @ApiModelProperty(value="密码")
     private String password;
 
     public User() {

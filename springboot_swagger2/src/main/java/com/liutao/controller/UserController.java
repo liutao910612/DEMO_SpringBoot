@@ -1,7 +1,9 @@
 package com.liutao.controller;
 
 import com.liutao.vo.User;
-import com.wordnik.swagger.annotations.*;
+import com.wordnik.swagger.annotations.Api;
+import com.wordnik.swagger.annotations.ApiOperation;
+import com.wordnik.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -19,14 +21,14 @@ import java.util.*;
  * @see
  * @since
  */
-@Api(value="用户controller",tags={"用户操作接口"})
+@Api(value="用户controller")
 @RestController
 @RequestMapping("/liutao/v1")
 public class UserController {
 
     private Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    static Map<String,User> users = Collections.synchronizedMap(new HashMap<String, User>());
+    static Map<String,User> users = Collections.synchronizedMap(new HashMap<>());
     private static final String SUCCESS = "success";
 
     @RequestMapping(value = "/index",method = RequestMethod.GET)
