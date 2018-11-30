@@ -1,4 +1,4 @@
-package com.liutao.config;
+package com.liutao.swagger.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +25,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.liutao.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.liutao.swagger.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

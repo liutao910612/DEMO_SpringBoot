@@ -1,18 +1,21 @@
-package com.liutao.vo;
+package com.liutao.swagger.vo;
 
-import com.wordnik.swagger.annotations.ApiModel;
-import com.wordnik.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+import java.io.Serializable;
 
 /**
  * @author LIUTAO
  * @version 2018/3/20 9:53
  */
-@ApiModel(value="user对象",description="用户对象user")
-public class User {
+@ApiModel(value="user对象",description="订单对象user")
+public class User implements Serializable {
+    @ApiModelProperty(hidden = true)
     private String id;
-    @ApiModelProperty(value="用户名")
+    @ApiModelProperty(value="订单名",name="name",example="xingguo")
     private String name;
-    @ApiModelProperty(value="密码")
+    @ApiModelProperty(value="密码",name="password",required=true)
     private String password;
 
     public User() {

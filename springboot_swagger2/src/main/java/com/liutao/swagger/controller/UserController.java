@@ -1,9 +1,7 @@
-package com.liutao.controller;
+package com.liutao.swagger.controller;
 
-import com.liutao.vo.User;
-import com.wordnik.swagger.annotations.Api;
-import com.wordnik.swagger.annotations.ApiOperation;
-import com.wordnik.swagger.annotations.ApiParam;
+import com.liutao.swagger.vo.User;
+import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -21,36 +19,42 @@ import java.util.*;
  * @see
  * @since
  */
-@Api(value="用户controller")
+@Api(tags="基础接口",description = "基础内容接口")
 @RestController
 @RequestMapping("/liutao/v1")
 public class UserController {
 
     private Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    static Map<String,User> users = Collections.synchronizedMap(new HashMap<>());
+    static Map<String,User> users = Collections.synchronizedMap(new HashMap<String, User>());
     private static final String SUCCESS = "success";
-
-    @RequestMapping(value = "/index",method = RequestMethod.GET)
-    public ModelAndView getUserInfo() {
-        logger.info("enter index");
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("name","熊大");
-        modelAndView.setViewName("index");
-        return modelAndView;
-    }
 
     /**
      * 获取用户资源集合
      * Get:获取、获得
      * @return
      */
-    @ApiOperation(value="获取用户列表", notes="")
+    @ApiOperation(value="获取用户列表", notes="获取到的是所有的用户")
     @GetMapping("users")
     public List<User> getUsers(){
         logger.info("enter get users");
         List<User> userList = new ArrayList<>( users.values());
         return userList;
+    }
+
+    /**
+     * 获取单个资源
+     * Get:获取、获得
+     * @return
+     */
+    @ApiOperation(value="获取用户", notes="获取到的是单个用户")
+    @GetMapping("user")
+    public User getUser(){
+        User user = new User();
+        user.setName("liutao");
+        user.setId("1212");
+        user.setPassword("123456");
+        return user;
     }
 
     /**
