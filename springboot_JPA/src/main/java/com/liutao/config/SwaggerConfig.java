@@ -44,7 +44,7 @@ public class SwaggerConfig {
                  * 注意以下的属性可以随意删减
                  */
                 .title("THIS IS DEMO OF SPRINGBOOT AND SWAGGER")//大标题
-                .description("this demo is used to explain how to use springBoot and swagger.")//详细描述
+                .description("this template is used to explain how to use springBoot and swagger.")//详细描述
                 .version("1.0")//版本
                 .termsOfServiceUrl("NO terms of service")
                 .contact(new Contact("LT",""  , "liutao910612@126.com"))//作者

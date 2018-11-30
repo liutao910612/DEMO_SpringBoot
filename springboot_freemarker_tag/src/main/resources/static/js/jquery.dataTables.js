@@ -9197,7 +9197,7 @@
 	
 	
 	/**
-	 * Convert from camel case parameters to Hungarian notation. This is made public
+	 * Convert from camel case parameters to Hungarian notation. This is made publiz
 	 * for the extensions to provide the same ability as DataTables core to accept
 	 * either the 1.9 style Hungarian notation, or the 1.10+ style camelCase
 	 * parameters.

@@ -15,5 +15,7 @@ SpringBoot中使用事务
 SpringBoot中使用Spring+redis实现缓存
 ### 8.springboot_redis_cache2
 SpringBoot中使用redis实现缓存
-### 9.springboot_swagger2<br/>
+### 9.springboot_swagger2
 这里使用的是2.9.2的版本，功能比较完善，界面也非常好看。
+### 10.springboot-mongodb
+针对Spring Boot对mongodb的使用的演示，这里展示了MongoTemplate和MongoRepository的详细使用方法。
