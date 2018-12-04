@@ -19,3 +19,5 @@ SpringBoot中使用redis实现缓存
 这里使用的是2.9.2的版本，功能比较完善，界面也非常好看。
 ### 10.springboot-mongodb
 针对Spring Boot对mongodb的使用的演示，这里展示了MongoTemplate和MongoRepository的详细使用方法。
+在使用MongoTemplate的过程中，我们可以发现针对条件的使用主要是依靠Query和Criteria这两个类来实现。
+Query里面包含了分页和排序的功能。而Criteria里面就包含了分组，模糊查询等功能。

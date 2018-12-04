@@ -23,9 +23,13 @@ public class TemplateTest {
 
     @Test
     public void test(){
-        User user = new User(1,"jock2","jock2@126.com","123123");
-        templateDemo.saveUser(user,"users");
-        user = templateDemo.findByUsername("jock2","users");
-        System.out.println(user);
+//        User user = new User(2,"liubang","liubang123131232@126.com","gdsfggsd123123");
+//        templateDemo.saveUser(user,"users");
+//        user = templateDemo.findByUsername("jock2","users");
+//        System.out.println(user);
+
+//        System.out.println(templateDemo.findUsersByUsername("liubang","users"));
+//        System.out.println(templateDemo.deleteUserByUser(new User(1,"jock","jock@126.com","123")));
+        System.out.println(templateDemo.updateUserByUsername("liubang","liusanwa","users"));
     }
 }
