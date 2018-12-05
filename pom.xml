@@ -13,11 +13,10 @@
         <module>springboot_Async</module>
         <module>springboot_ExceptionHandle</module>
         <module>springboot_JPA</module>
-        <module>springboot_redis_message</module>
         <module>springboot_freemarker_tag</module>
         <module>springboot_interceptor</module>
         <module>springboot_mail</module>
-        <module>springboot_redis_cache2</module>
+        <module>springboot_redis</module>
         <module>springboot_scheduler</module>
         <module>public</module>
         <module>springboot-mongodb</module>
