@@ -1,6 +1,6 @@
-2018-11-30 17:50:13.649 [restartedMain] INFO  com.liutao.application.Application - Starting Application on 8OGCFUXON4IB3EN with PID 194572 (F:\myself\DEMO_SpringBoot\springboot_swagger2\target\classes started by Administrator in F:\myself\DEMO_SpringBoot)
-2018-11-30 17:50:13.652 [restartedMain] INFO  com.liutao.application.Application - No active profile set, falling back to default profiles: default
-2018-11-30 17:50:14.817 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.liutao.application]' package. Please check your configuration.
+2018-11-30 17:50:13.649 [restartedMain] INFO  com.liutao.scheduler.Application - Starting Application on 8OGCFUXON4IB3EN with PID 194572 (F:\myself\DEMO_SpringBoot\springboot_swagger2\target\classes started by Administrator in F:\myself\DEMO_SpringBoot)
+2018-11-30 17:50:13.652 [restartedMain] INFO  com.liutao.scheduler.Application - No active profile set, falling back to default profiles: default
+2018-11-30 17:50:14.817 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.liutao.scheduler.application]' package. Please check your configuration.
 2018-11-30 17:50:16.001 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
 2018-11-30 17:50:16.004 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
 2018-11-30 17:50:16.005 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12

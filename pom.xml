@@ -3,23 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>SpringBoot_Demo</groupId>
-    <artifactId>SpringBoot_demo</artifactId>
+    <groupId>DEMO_SpringBoot</groupId>
+    <artifactId>DEMO_SpringBoot</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>springboot_activeMq_P2P</module>
-        <module>springboot_activeMq_PubSub</module>
-        <module>springboot_Async</module>
-        <module>springboot_ExceptionHandle</module>
-        <module>springboot_JPA</module>
-        <module>springboot_freemarker_tag</module>
-        <module>springboot_interceptor</module>
         <module>springboot_mail</module>
         <module>springboot_redis</module>
         <module>springboot_scheduler</module>
         <module>public</module>
         <module>springboot-mongodb</module>
+        <module>springboot-kafka</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -69,10 +63,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.21</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
         </dependency>
     </dependencies>
     <build>

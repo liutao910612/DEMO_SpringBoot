@@ -1,6 +1,6 @@
 package com.liutao.userTest;
 
-import com.liutao.application.Application;
+import com.liutao.scheduler.application.Application;
 import com.liutao.service.UserService;
 import freemarker.template.Configuration;
 import freemarker.template.Template;

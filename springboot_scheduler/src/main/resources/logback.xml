@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
-    <property name="LOG_HOME" value="D:/log" />
+    <property name="LOG_HOME" value="${TAS_HOME:-..}/logs" />
     <property name="app_name" value="supplychain_finance_provider"/>
     <property name="consoleLayoutPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n"/>
     <property name="fileLayoutPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n"/>
