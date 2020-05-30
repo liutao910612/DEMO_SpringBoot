@@ -1,11 +1,10 @@
-package com.liutao.swagger.controller;
+package com.liutao.es.controller;
 
-import com.liutao.swagger.vo.User;
+import com.liutao.es.vo.User;
 import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 import springfox.documentation.annotations.ApiIgnore;
 
 import java.util.*;

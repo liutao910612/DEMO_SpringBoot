@@ -1,4 +1,4 @@
-package com.liutao.swagger.vo;
+package com.liutao.es.vo;
 
 /**
  * @author: LIUTAO
