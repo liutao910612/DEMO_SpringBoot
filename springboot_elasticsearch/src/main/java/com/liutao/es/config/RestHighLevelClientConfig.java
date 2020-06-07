@@ -25,7 +25,7 @@ public class RestHighLevelClientConfig {
         CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
         credentialsProvider.setCredentials(AuthScope.ANY,
                 new UsernamePasswordCredentials("elastic", "123456"));
-        RestClientBuilder builder = RestClient.builder(new HttpHost("192.168.1.11", 9200))
+        RestClientBuilder builder = RestClient.builder(new HttpHost("192.168.1.6", 9200))
                 .setHttpClientConfigCallback(httpClientBuilder -> httpClientBuilder.setDefaultCredentialsProvider(credentialsProvider));
         RestHighLevelClient restClient = new RestHighLevelClient(builder);
         return restClient;

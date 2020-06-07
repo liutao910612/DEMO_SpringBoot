@@ -47,25 +47,18 @@ public class OrderController {
     @PostMapping("order")
     public IndexResponse createOrder(@RequestBody Order order) {
         IndexResponse result = null;
+        IndexRequest request = new IndexRequest();
+        request.index(Order.class.getSimpleName().toLowerCase());
+        request.id(order.getId().toString());
+        String source = JSON.toJSONString(order);
+        request.source(source, XContentType.JSON);
         try {
-            IndexRequest request = new IndexRequest();
-            request.index(Order.class.getSimpleName().toLowerCase());
-            request.id(order.getId().toString());
-            String source = JSON.toJSONString(order);
-            request.source(source, XContentType.JSON);
-            try {
-                result = restClient.index(request, RequestOptions.DEFAULT);
-                log.debug("create order ,result : {}",result);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } finally {
-            try {
-                restClient.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            result = restClient.index(request, RequestOptions.DEFAULT);
+            log.debug("create order ,result : {}", result);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
         return result;
     }
 
@@ -78,22 +71,14 @@ public class OrderController {
     @GetMapping("order")
     public Object getOrder(@RequestParam("id") Long id) {
         GetResponse result = null;
+        GetRequest request = new GetRequest();
+        request.index(Order.class.getSimpleName().toLowerCase());
+        request.id(id.toString());
         try {
-            GetRequest request = new GetRequest();
-            request.index(Order.class.getSimpleName().toLowerCase());
-            request.id(id.toString());
-            try {
-                result = restClient.get(request, RequestOptions.DEFAULT);
-                log.debug("the response is : {}", result);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } finally {
-            try {
-                restClient.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            result = restClient.get(request, RequestOptions.DEFAULT);
+            log.debug("the response is : {}", result);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return EsUtil.processGetResponse(result);
     }
@@ -106,7 +91,7 @@ public class OrderController {
      */
     @ApiOperation(value = "Create orders")
     @PostMapping("orders")
-    public Map<String,Object> createOrders(@RequestBody List<Order> orders) {
+    public Map<String, Object> createOrders(@RequestBody List<Order> orders) {
         BulkRequest request = new BulkRequest();
         request.timeout(TimeValue.timeValueMillis(2));
 

@@ -104,7 +104,7 @@ public class UserController {
      * @return
      */
     @ApiOperation(value = "Create users")
-    @GetMapping ("users")
+    @PostMapping ("users/queryForm")
     public List<JSONObject> getOrders(@RequestBody List<Integer> ids) {
         MultiGetRequest request = new MultiGetRequest();
 
