@@ -108,17 +108,25 @@ public class LocalCacheProviderImpl implements CacheProviderService {
 
     @Override
     public void remove(String key) {
-
+        if(StringUtils.isEmpty(key)){
+            return;
+        }
+        Cache<String,Object> cacheContainer = getCacheContainer(CACHE_MINUTE);
+        cacheContainer.invalidate(key);
     }
 
     @Override
     public boolean contains(String key) {
-        return false;
+        return !StringUtils.isEmpty(key) && get(key) != null;
     }
 
     private Long getExpireTime(Long expireTime) {
-
-        return expireTime;
+        Long result = expireTime;
+        if(ObjectUtils.isEmpty(expireTime)
+                || expireTime < CACHE_MINUTE/10){
+            result = CACHE_MINUTE;
+        }
+        return result;
     }
 
     private Cache<String, Object> getCacheContainer(Long expireTime) {
