@@ -1,4 +1,4 @@
-package com.liutao.mongo.test;
+package com.liutao.elasticsearch.test;
 
 import com.liutao.mongo.application.Application;
 import com.liutao.mongo.template.TemplateDemo;
