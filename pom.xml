@@ -17,6 +17,7 @@
         <module>springboot-kafka</module>
         <module>springboot_cache</module>
         <module>springboot_redis</module>
+        <module>sprintboot_graphql</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
