@@ -13,8 +13,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <groupId>DEMO_SpringBoot</groupId>
+            <artifactId>redis</artifactId>
         </dependency>
     </dependencies>
 </project>
