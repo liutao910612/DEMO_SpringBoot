@@ -1,6 +1,6 @@
 package com.liutao.mongo.template;
 
-import com.liutao.publiz.model.User;
+import com.kevin.publiz.model.User;
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -2,7 +2,6 @@ package com.liutao.elasticsearch.test;
 
 import com.liutao.mongo.application.Application;
 import com.liutao.mongo.template.TemplateDemo;
-import com.liutao.publiz.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

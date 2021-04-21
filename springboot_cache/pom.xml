@@ -14,7 +14,8 @@
     <dependencies>
         <dependency>
             <groupId>DEMO_SpringBoot</groupId>
-            <artifactId>redis</artifactId>
+            <artifactId>springboot-redis</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>
