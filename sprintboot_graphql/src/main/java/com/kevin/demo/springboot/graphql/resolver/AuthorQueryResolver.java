@@ -15,16 +15,15 @@ import java.util.List;
  * @author alvinl
  * @date 04/12/21 17:00
  **/
-public class BookQueryResolver implements GraphQLQueryResolver {
-
-    public List<Book> findAllBooks() {
-        Book b = new Book("scala编程第三版", "电子工业出版社");
-        List<Book> bookList = new ArrayList<>();
-        bookList.add(b);
-        return bookList;
+public class AuthorQueryResolver implements GraphQLQueryResolver {
+    public List<Author> findAllAuthors() {
+        Author author = new Author("scala编程第三版", "电子工业出版社");
+        List<Author> authors = new ArrayList<>();
+        authors.add(author);
+        return authors;
     }
 
-    public long countBooks() {
+    public long countAuthors() {
         return 1L;
     }
 }

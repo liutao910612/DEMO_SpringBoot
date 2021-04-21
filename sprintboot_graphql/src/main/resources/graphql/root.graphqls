@@ -1,0 +1,13 @@
+type Query{
+    findAllAuthors:[Author]!
+    countAuthors:Long!
+
+    findAllBooks:[Book]!
+    countBooks:Long!
+}
+
+#type Mutation{
+#    newAuthor(firstName:String!,lastName:String!):Author!
+#    newBook(title:String!,publisher:String!):Book!
+#    saveBook(input:BookInput!):Book!
+#}

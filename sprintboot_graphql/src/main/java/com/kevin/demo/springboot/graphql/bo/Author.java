@@ -11,49 +11,21 @@ import java.io.Serializable;
  * @date 04/12/21 16:55
  **/
 public class Author implements Serializable{
-    private Integer id;
-    private String name;
-    private Integer age;
-
+    private String firstName;
+    private String lastName;
     public Author() {
     }
 
-    public Author(Integer id, String name, Integer age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public Integer getId() {
-        return id;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 }

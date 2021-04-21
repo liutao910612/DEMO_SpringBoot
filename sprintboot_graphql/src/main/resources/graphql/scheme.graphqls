@@ -1,0 +1,12 @@
+type Author {
+    firstName: String
+    lastName: String
+}
+input BookInput {
+    title: String!
+    publisher: String!
+}
+type Book {
+    title: String!
+    publisher: String!
+}
