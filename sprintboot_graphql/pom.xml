@@ -26,6 +26,12 @@
             <artifactId>graphiql-spring-boot-starter</artifactId>
             <version>7.1.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>DEMO_SpringBoot</groupId>
+            <artifactId>public</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

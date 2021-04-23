@@ -1,8 +1,7 @@
 package com.kevin.demo.springboot.graphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.kevin.demo.springboot.graphql.bo.Author;
-import com.kevin.demo.springboot.graphql.bo.Book;
+import com.kevin.publiz.model.Book;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

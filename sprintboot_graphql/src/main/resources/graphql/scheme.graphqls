@@ -1,6 +1,9 @@
 type Author {
     firstName: String
     lastName: String
+    age: Int
+    address:String
+    email:String
 }
 input BookInput {
     title: String!

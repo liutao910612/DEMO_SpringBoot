@@ -1,8 +1,7 @@
 package com.kevin.demo.springboot.graphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.kevin.demo.springboot.graphql.bo.Author;
-import com.kevin.demo.springboot.graphql.bo.Book;
+import com.kevin.publiz.model.Author;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -19,9 +18,10 @@ import java.util.List;
 @Component
 public class AuthorQueryResolver implements GraphQLQueryResolver {
     public List<Author> findAllAuthors() {
-        Author author = new Author("scala编程第三版", "电子工业出版社");
+        Author author = new Author("kevin", "liu", 28, "People Road", "1745662323");
         List<Author> authors = new ArrayList<>();
-        authors.add(author);
+        authors.add(new Author("kevin", "liu", 28, "People Road", "1745662323"));
+        authors.add(new Author("cube", "zhang", 30, "People Road", "1345622323"));
         return authors;
     }
 

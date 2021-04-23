@@ -1,4 +1,4 @@
-package com.kevin.demo.springboot.graphql.bo;
+package com.kevin.publiz.model;
 
 import java.io.Serializable;
 
