@@ -1,4 +1,4 @@
-package com.liutao.publiz.model;
+package com.kevin.publiz.model;
 
 /**
  * @author: LIUTAO
