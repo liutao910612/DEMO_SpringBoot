@@ -9,16 +9,16 @@
     <version>1.0-SNAPSHOT</version>
     <name>spring boot demo</name>
     <modules>
-        <module>springboot_elasticsearch</module>
-        <module>springboot_scheduler</module>
-        <module>springboot_swagger2</module>
+        <module>elasticsearch</module>
+        <module>scheduler</module>
+        <module>swagger2</module>
         <module>public</module>
-        <module>springboot-mongodb</module>
-        <module>springboot-kafka</module>
-        <module>springboot_cache</module>
-        <module>springboot_redis</module>
-        <module>sprintboot_graphql</module>
-        <module>springboot_docker</module>
+        <module>mongodb</module>
+        <module>kafka</module>
+        <module>cache</module>
+        <module>redis</module>
+        <module>graphql</module>
+        <module>docker</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -105,6 +105,21 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>2.9.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-spring-boot-starter</artifactId>
+                <version>4.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-java-tools</artifactId>
+                <version>4.3.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.graphql-java-kickstart</groupId>
+                <artifactId>graphiql-spring-boot-starter</artifactId>
+                <version>7.1.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
