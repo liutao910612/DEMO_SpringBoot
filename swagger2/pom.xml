@@ -5,8 +5,8 @@
     <artifactId>springboot_swagger2</artifactId>
     <packaging>jar</packaging>
     <parent>
-        <groupId>DEMO_SpringBoot</groupId>
-        <artifactId>DEMO_SpringBoot</artifactId>
+        <groupId>com.kevin.demo.springboot</groupId>
+        <artifactId>demo-springboot</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <dependencies>

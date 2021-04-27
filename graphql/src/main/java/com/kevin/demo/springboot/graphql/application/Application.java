@@ -1,4 +1,4 @@
-package com.kevin.demo.springboot.graphql.application;
+package com.kevin.demo.springboot.springboot.graphql.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @since
  */
 @SpringBootApplication
-@ComponentScan(basePackages={"com.kevin.demo.springboot.graphql"})
+@ComponentScan(basePackages={"com.kevin.demo.springboot.springboot.graphql"})
 public class Application {
 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.kevin.demo.springboot.graphql.resolver;
+package com.kevin.demo.springboot.springboot.graphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.kevin.publiz.model.Author;

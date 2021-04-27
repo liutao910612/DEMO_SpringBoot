@@ -1,4 +1,4 @@
-package com.kevin.redis;
+package com.kevin.demo.springboot.springboot.redis;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
